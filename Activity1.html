@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Registration Form</title> 
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff69b4; /* Pink background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Set body position to relative */
+            overflow: hidden; /* Hide overflow to prevent scrolling */
+        }
+        .container {
+            width: 100%;
+            text-align: center; /* Center align content */
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 36px;
+            color: #007bff; /* Blue color */
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 1; /* Ensure text is above form */
+            animation: float 5s linear infinite alternate; /* Add floating animation */
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: inline-block; /* Center the form */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Striped pattern */
+        body:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(45deg, #fff, #fff 10px, transparent 10px, transparent 20px); /* Pink with white stripes */
+            z-index: -1; /* Set behind other elements */
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <h1>Xianti's Registration</h1> 
+   <form action="Activity2.html"> <!-- Redirects to Activity2.html after submission --> 
+    <div> <label for="username">Username:</label> 
+     <input type="text" id="username" name="username" required> 
+    </div> 
+    <div> <label for="email">Email:</label> 
+     <input type="email" id="email" name="email" required> 
+    </div> 
+    <div> <label for="password">Password:</label> 
+     <input type="password" id="password" name="password" required> 
+    </div> <button type="submit">Register</button> 
+   </form> 
+  </div> 
+ 
+</body></html>
