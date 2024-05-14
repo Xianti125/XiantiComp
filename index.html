@@ -66,10 +66,10 @@
 <body>
     <h1>Xianti's Dice Roller</h1>
     <div class="dice-container">
-        <div class="dice" id="dice1">1</div>
-        <div class="dice" id="dice2">1</div>
-        <div class="dice" id="dice3">1</div>
-        <div class="dice" id="dice4">1</div>
+        <div class="dice" id="dice1">&#9856;</div>
+        <div class="dice" id="dice2">&#9856;</div>
+        <div class="dice" id="dice3">&#9856;</div>
+        <div class="dice" id="dice4">&#9856;</div>
     </div>
     <button onclick="rollDice()">Roll Dice</button>
 
@@ -78,7 +78,7 @@
             for (let i = 1; i <= 4; i++) {
                 const dice = document.getElementById(`dice${i}`);
                 const result = Math.floor(Math.random() * 6) + 1;
-                dice.textContent = result;
+                dice.innerHTML = `&#${9855 + result};`; // Unicode code points for dice faces
             }
         }
     </script>
